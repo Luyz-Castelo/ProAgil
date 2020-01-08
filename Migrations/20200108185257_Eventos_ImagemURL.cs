@@ -2,15 +2,14 @@
 
 namespace ProAgil.API.Migrations
 {
-    public partial class Nome : Migration
+    public partial class Eventos_ImagemURL : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.AddColumn<int>(
+            migrationBuilder.AddColumn<string>(
                 name: "ImagemURL",
                 table: "Eventos",
-                nullable: false,
-                defaultValue: 0);
+                nullable: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

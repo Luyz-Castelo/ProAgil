@@ -22,7 +22,7 @@ namespace ProAgil.API.Migrations
 
                     b.Property<string>("DataEvento");
 
-                    b.Property<int>("ImagemURL");
+                    b.Property<string>("ImagemURL");
 
                     b.Property<string>("Local");
 
