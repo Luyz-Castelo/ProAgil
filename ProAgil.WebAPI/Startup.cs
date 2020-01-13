@@ -11,9 +11,9 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
-using ProAgil.API.data;
+using ProAgil.WebAPI.Data;
 
-namespace ProAgil.API
+namespace ProAgil.WebAPI
 {
     public class Startup
     {

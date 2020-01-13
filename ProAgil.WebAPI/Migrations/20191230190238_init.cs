@@ -1,6 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ProAgil.API.Migrations
+namespace ProAgil.WebAPI.Migrations
 {
     public partial class init : Migration
     {

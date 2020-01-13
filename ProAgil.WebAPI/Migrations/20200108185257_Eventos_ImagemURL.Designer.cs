@@ -3,13 +3,13 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProAgil.API.data;
+using ProAgil.WebAPI.Data;
 
-namespace ProAgil.API.Migrations
+namespace ProAgil.WebAPI.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20191230190238_init")]
-    partial class init
+    [Migration("20200108185257_Eventos_ImagemURL")]
+    partial class Eventos_ImagemURL
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -23,6 +23,8 @@ namespace ProAgil.API.Migrations
                         .ValueGeneratedOnAdd();
 
                     b.Property<string>("DataEvento");
+
+                    b.Property<string>("ImagemURL");
 
                     b.Property<string>("Local");
 
