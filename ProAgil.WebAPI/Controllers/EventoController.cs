@@ -79,7 +79,7 @@ namespace ProAgil.WebAPI.Controllers
             {
                 var evento = _mapper.Map<Evento>(model);
 
-                _repo.Add(model);
+                _repo.Add(evento);
 
                 if(await _repo.SaveChangesAsync())
                 {
@@ -101,7 +101,7 @@ namespace ProAgil.WebAPI.Controllers
                 var evento = await _repo.GetEventoAsyncById(EventoId, false);
                 if(evento == null) return NotFound();
 
-                _repo.Update(model);
+                _repo.Update(evento);
 
                 if(await _repo.SaveChangesAsync())
                 {

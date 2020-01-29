@@ -1,3 +1,4 @@
+using System;
 using System.Linq;
 using AutoMapper;
 using ProAgil.Domain;
@@ -9,6 +10,8 @@ namespace ProAgil.WebAPI.Helpers
     {
         public AutoMapperProfiles()
         {
+            CreateMap<DateTime, string>().ConvertUsing(dt => dt.ToString("yyyy-MM-dd HH:mm:ss"));
+
             CreateMap<Evento, EventoDto>()
             .ForMember(dest => dest.Palestrantes, opt => {
                 opt.MapFrom(src => src.PalestrantesEventos.Select(x => x.Palestrante).ToList());
