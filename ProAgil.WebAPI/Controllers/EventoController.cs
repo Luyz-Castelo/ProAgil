@@ -126,7 +126,7 @@ namespace ProAgil.WebAPI.Controllers
             return BadRequest();
         }
         [HttpPut("{EventoId}")]
-        public async Task<IActionResult> Put(int EventoId, Evento model)
+        public async Task<IActionResult> Put(int EventoId, EventoDto model)
         {
             try
             {
@@ -146,8 +146,8 @@ namespace ProAgil.WebAPI.Controllers
                 if (lotes.Length > 0) _repo.DeleteRange(lotes);
                 if (redesSociais.Length > 0) _repo.DeleteRange(redesSociais);
 
-                evento.Lotes =  model.Lotes;
-                evento.RedesSociais = model.RedesSociais;
+                // evento.Lotes =  model.Lotes;
+                // evento.RedesSociais = model.RedesSociais;
 
                 _mapper.Map(model, evento);
 
